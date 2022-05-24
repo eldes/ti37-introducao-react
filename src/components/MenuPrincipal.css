@@ -1,0 +1,15 @@
+.menu-principal {
+  height: 40px;
+  background-color: #ff0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.menu-item {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
