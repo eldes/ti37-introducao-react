@@ -5,6 +5,10 @@ import CampoTexto from '../components/CampoTexto';
 const HomePage = function() {
 	const [data, setData] = useState((new Date()).toLocaleString());
 
+	setInterval(function() {
+		setData((new Date()).toLocaleString());
+	}, 1000);
+
 	const botaoAtualizarClicado = function() {
 		setData((new Date()).toLocaleString());
 	};
