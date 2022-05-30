@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import Botao from '../components/Botao';
 import CampoTexto from '../components/CampoTexto';
 
 const HomePage = function() {
-	const data = '30 de maio de 2022, 17h26';
+	const [data, setData] = useState((new Date()).toLocaleString());
+
+	const botaoAtualizarClicado = function() {
+		setData((new Date()).toLocaleString());
+	};
 
 	const botaoEntrarClicado = function() {
 		alert('ENTRAR');
@@ -16,6 +21,7 @@ const HomePage = function() {
 		<>
 			<h1>Homepage</h1>
 			<p>{data}</p>
+			<Botao texto="Atualizar" botaoClicado={botaoAtualizarClicado} />
 			<div>
 				<CampoTexto etiqueta="Nome de usuário" />
 				<CampoTexto etiqueta="Senha" />
