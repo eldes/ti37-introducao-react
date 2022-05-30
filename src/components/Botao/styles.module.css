@@ -1,0 +1,8 @@
+.Botao {
+  background-color: #000;
+  color: #ff0;
+  border-style: none;
+  padding: 4px 8px;
+  min-width: 100px;
+  text-transform: uppercase;
+}
