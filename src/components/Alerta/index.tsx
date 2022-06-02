@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import styles from './styles.module.css';
 
 type Props = {
   texto: string
@@ -6,7 +7,7 @@ type Props = {
 
 const Alerta: FunctionComponent<Props> = function(props) {
   return (
-    <div>
+    <div className={styles.Alerta}>
       <p>{props.texto}</p>
     </div>
   );
