@@ -1,4 +1,4 @@
-import { ChangeEventHandler, FunctionComponent } from 'react';
+import { ChangeEventHandler, FunctionComponent, useState } from 'react';
 import styles from './styles.module.css';
 
 type Props = {
@@ -8,17 +8,22 @@ type Props = {
 
 const CampoTexto: FunctionComponent<Props> = function(props) {
 
+  const [texto, setTexto] = useState('');
+
   const valorAlterado: ChangeEventHandler<HTMLInputElement> = function(evento) {
-    if (props.textoAlterado) {
-      const input = evento.target;
-      const texto = input.value;
+    const input = evento.target;
+    setTexto(input.value);
+
+    if (props.textoAlterado) {  
       props.textoAlterado(texto);
     }
   };
 
   return (
     <div className={styles.CampoTexto}>
-      <label>{props.etiqueta}:</label>
+      {(texto.length > 0) && (
+        <label>{props.etiqueta}:</label>
+      )}
       <input placeholder={props.etiqueta} onChange={valorAlterado} />
     </div>
   );

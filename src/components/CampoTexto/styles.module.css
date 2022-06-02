@@ -1,4 +1,21 @@
 .CampoTexto {
+  margin-bottom: 4px;
+  border-bottom: 1px solid #000;
+  background-color: #ccc;
+  border-radius: 4px 4px 0px 0px;
+  padding: 4px;
   display: flex;
   flex-direction: column;
+}
+
+.CampoTexto input,
+.CampoTexto input:focus {
+  border-style: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.CampoTexto label {
+  font-size: 0.6em;
+  padding-bottom: 4px;
 }

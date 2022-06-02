@@ -43,7 +43,7 @@ const HomePage = function() {
 				<Alerta texto="Login incorreto!" />
 			)}
 			
-			<div>
+			<div style={{padding: 10}}>
 				<CampoTexto etiqueta="Nome de usuário" textoAlterado={setNomeUsuario} />
 				<CampoTexto etiqueta="Senha" textoAlterado={setSenha} />
 				<Botao texto="Entrar" botaoClicado={botaoEntrarClicado} />
