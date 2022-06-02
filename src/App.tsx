@@ -13,7 +13,7 @@ const App: FunctionComponent = function () {
       <Cabecalho />
       <MenuPrincipal />
       <article>
-        <HomePage />
+        <FriosPage />
       </article>
       <Aside />
       <Rodape />
