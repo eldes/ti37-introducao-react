@@ -16,8 +16,9 @@ const produtos: Produto[] = [
 ];
 
 const ProdutosService = {
-  lerTodos: function () {
-    return produtos;
+  lerTodos: function (callback: (produtos: Produto[]) => void) {
+    // Depois de receber os dados do servidor:
+    callback(produtos);
   },
 
   ler: function (id: number) {},
