@@ -2,7 +2,9 @@ import './styles.css';
 
 const Rodape = function() {
   return (
-    <footer>Footer</footer>
+    <footer>
+      <a href="/contato">Contato</a>
+    </footer>
   );
 };
 

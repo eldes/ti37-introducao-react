@@ -7,6 +7,7 @@ import MenuPrincipal from './components/MenuPrincipal';
 import Rodape from './components/Rodape';
 import Categoria from './models/Categoria';
 import CategoriaPage from './pages/Categoria';
+import ContatoPage from './pages/Contato';
 import CategoriasService from './services/Categorias';
 
 const App: FunctionComponent = function () {
@@ -25,27 +26,25 @@ const App: FunctionComponent = function () {
         categoriaSelecionada={ function () {} }
       />
       <article>
-        {(categorias.length > 1) && (
-          <BrowserRouter>
-            <Routes>
-              {
-                categorias.map(
-                  function (categoria) {
-                    return (
-                      <Route
-                        path={`/${categoria.slug}`}
-                        element={
-                          <CategoriaPage categoria={categoria} />
-                        }
-                      />
-                    );
-                  }
-                )
-              }
-            </Routes>
-          </BrowserRouter>
-          
-        )}
+        <BrowserRouter>
+          <Routes>
+            {
+              categorias.map(
+                function (categoria) {
+                  return (
+                    <Route
+                      path={`/${categoria.slug}`}
+                      element={
+                        <CategoriaPage categoria={categoria} />
+                      }
+                    />
+                  );
+                }
+              )
+            }
+            <Route path="/contato" element={<ContatoPage/>} />
+          </Routes>
+        </BrowserRouter>
       </article>
       <Aside />
       <Rodape />
