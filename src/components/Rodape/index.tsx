@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import './styles.css';
+import styles from './styles.module.css';
 
 const Rodape = function() {
   return (
-    <footer>
-      <Link to="/contato">Contato</Link>
+    <footer className={styles.Rodape}>
+      <Link className={styles.Link} to="/contato">Contato</Link>
     </footer>
   );
 };

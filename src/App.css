@@ -1,5 +1,12 @@
-header {
-	background-color: aqua;
+body {
+	background-color: darkorange;
+}
+
+.App {
+}
+
+article {
+	background-color: #fff;
 }
 
 nav {
@@ -11,8 +18,4 @@ article {
 
 aside {
 	background-color: darkolivegreen;
-}
-
-footer {
-	background-color: darkorange;
 }

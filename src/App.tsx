@@ -19,7 +19,7 @@ const App: FunctionComponent = function () {
   }, []);
   
   return (
-    <div>
+    <div className='App'>
       <BrowserRouter>
         <Cabecalho />
         <MenuPrincipal

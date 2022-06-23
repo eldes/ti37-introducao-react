@@ -1,8 +1,8 @@
-import './styles.css';
+import styles from './styles.module.css';
 
 const Cabecalho = function() {
   return (
-    <header>Header</header>
+    <header className={styles.Cabecalho}>Header</header>
   );
 };
 
