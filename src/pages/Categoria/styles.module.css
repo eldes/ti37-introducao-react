@@ -1,0 +1,15 @@
+.CategoriaPage {
+  padding: 10px 20px;
+}
+
+.Nome {
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+}
+
+.Produtos {
+  display: flex;
+  column-gap: 16px;
+  justify-content: center;
+}
