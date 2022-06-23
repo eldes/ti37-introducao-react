@@ -1,22 +1,20 @@
-import { useEffect, useState } from 'react';
+import { FunctionComponent } from 'react';
 import Categoria from '../models/Categoria';
-import CategoriasService from '../services/Categorias';
 import './MenuPrincipal.css';
 
-const MenuPrincipal = function() {
+type Props = {
+  categorias: Categoria[]
+  categoriaSelecionada: () => void
+};
 
-  const [categorias, setCategorias] = useState<Categoria[]>([]);
-
-  useEffect(function () {
-    CategoriasService.lerTodas(setCategorias);
-  }, []);
+const MenuPrincipal: FunctionComponent<Props> = function(props) {
 
   return (
     <nav className="menu-principal">
       {
-        categorias.map(
+        props.categorias.map(
           function (categoria) {
-            return <a href="" className="menu-item">{categoria.nome}</a>
+            return <a href={`/${categoria.slug}`} className="menu-item">{categoria.nome}</a>
           }
         )
       }
