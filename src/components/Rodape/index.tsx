@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 const Rodape = function() {
   return (
     <footer>
-      <a href="/contato">Contato</a>
+      <Link to="/contato">Contato</Link>
     </footer>
   );
 };

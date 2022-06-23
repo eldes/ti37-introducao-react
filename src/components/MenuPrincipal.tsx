@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import { Link } from 'react-router-dom';
 import Categoria from '../models/Categoria';
 import './MenuPrincipal.css';
 
@@ -14,7 +15,7 @@ const MenuPrincipal: FunctionComponent<Props> = function(props) {
       {
         props.categorias.map(
           function (categoria) {
-            return <a href={`/${categoria.slug}`} className="menu-item">{categoria.nome}</a>
+            return <Link to={`/${categoria.slug}`} className="menu-item">{categoria.nome}</Link>
           }
         )
       }

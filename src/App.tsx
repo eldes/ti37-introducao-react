@@ -20,13 +20,13 @@ const App: FunctionComponent = function () {
   
   return (
     <div>
-      <Cabecalho />
-      <MenuPrincipal
-        categorias={categorias}
-        categoriaSelecionada={ function () {} }
-      />
-      <article>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Cabecalho />
+        <MenuPrincipal
+          categorias={categorias}
+          categoriaSelecionada={ function () {} }
+        />
+        <article>
           <Routes>
             {
               categorias.map(
@@ -44,10 +44,10 @@ const App: FunctionComponent = function () {
             }
             <Route path="/contato" element={<ContatoPage/>} />
           </Routes>
-        </BrowserRouter>
-      </article>
-      <Aside />
-      <Rodape />
+        </article>
+        <Aside />
+        <Rodape />
+      </BrowserRouter>
     </div>
   );
 };
