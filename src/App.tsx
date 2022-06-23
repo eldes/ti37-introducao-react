@@ -28,24 +28,20 @@ const App: FunctionComponent = function () {
         {(categorias.length > 1) && (
           <BrowserRouter>
             <Routes>
-              <Route
-                path="/frios"
-                element={
-                  <CategoriaPage categoria={categorias[0]} />
-                }
-              />
-              <Route
-                path="/padaria"
-                element={
-                  <CategoriaPage categoria={categorias[1]} />
-                }
-              />
-              <Route
-                path="/cafe"
-                element={
-                  <CategoriaPage categoria={categorias[2]} />
-                }
-              />
+              {
+                categorias.map(
+                  function (categoria) {
+                    return (
+                      <Route
+                        path={`/${categoria.slug}`}
+                        element={
+                          <CategoriaPage categoria={categoria} />
+                        }
+                      />
+                    );
+                  }
+                )
+              }
             </Routes>
           </BrowserRouter>
           

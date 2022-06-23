@@ -32,6 +32,19 @@ const categorias: Categoria[] = [
     produtos: [],
     slug: 'cafe',
   },
+  {
+    id: 4,
+    nome: 'Bebidas',
+    produtos: [
+      {
+        id: 3,
+        urlFoto: 'https://www.distribuidoracaue.com.br/media/catalog/product/cache/1/thumbnail/600x800/9df78eab33525d08d6e5fb8d27136e95/s/u/suco_nectar_maguary_laranja_1_litro.jpg',
+        nome: 'Suco de Laranja',
+        preco: 10,
+      },
+    ],
+    slug: 'bebidas',
+  },
 ];
 
 const CategoriasService = {
